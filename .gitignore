@@ -1,0 +1,6 @@
+.terraform/
+terraform.tfstate
+terrafform.tfstate.*
+.terraform.lock.hcl
+
+
