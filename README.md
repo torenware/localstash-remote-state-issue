@@ -21,3 +21,7 @@ Here's what I'm trying to do:
 
  
  Why am I getting the InvalidAccessKeyId when using tflocal?
+ 
+## Update
+
+It turns out that tflocal is looking for both the remote state bucket and the dynamodb locking table on *live AWS*, and not in localstack's mocked up store.  [See my bug report on localstack Github](https://github.com/localstack/localstack/issues/8607).   
